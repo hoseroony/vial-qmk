@@ -5,9 +5,9 @@ bool is_alt_tab_active = false;
 uint16_t alt_tab_timer = 0;
 #endif
 
-#ifdef CASEMODES_ENABLE
-#include "users/sadekbaroudi/casemodes.h"
-#endif
+//#ifdef CASEMODES_ENABLE
+//#include "users/sadekbaroudi/casemodes.h"
+//#endif
 
 enum custom_keycodes {
     NEXTSEN = USER00,
@@ -209,7 +209,7 @@ void oled_task_user(void) {
 #endif
 
 bool process_record_user(uint16_t keycode, keyrecord_t *record) {
-    #ifdef CASEMODES_ENABLE
+ /*   #ifdef CASEMODES_ENABLE
     // Process case modes
     if (!process_case_modes(keycode, record)) {
         return false;
@@ -252,5 +252,6 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
             }
             break;
     }
+    */
     return true;
 };
